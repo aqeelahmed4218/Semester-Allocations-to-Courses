@@ -64,33 +64,3 @@ class Course:
 
     def get_info(self):
         return self.base_course.get_info()
-
-# Example usage:
-
-# Create courses
-cs101 = BaseCourse("CS101", "Introduction to Computer Science", 3)
-cs201 = BaseCourse("CS201", "Data Structures and Algorithms", 4)
-cs301 = MajorCourse("CS301", "Advanced Algorithms", 3, ["CS201", "CS202"])
-cs350 = ElectiveCourse("CS350", "Topics in Computer Science", 3, "Artificial Intelligence")
-
-# Create semesters
-fall2023 = Semester("Fall 2023")
-spring2024 = Semester("Spring 2024")
-
-# Create course instances
-course1 = Course(cs101, [fall2023])
-course2 = Course(cs201, [spring2024])
-course3 = Course(cs301, [spring2024])
-course4 = Course(cs350, [fall2023, spring2024])
-
-# Add courses to semesters
-fall2023.add_course(course1)
-fall2023.add_course(course4)
-spring2024.add_course(course2)
-spring2024.add_course(course3)
-spring2024.add_course(course4)
-
-# Print course info
-print(course1.get_info())
-print(course2.get_info())
-print(course3
